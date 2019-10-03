@@ -30,13 +30,32 @@ Edit this document to include your answers after each question. Make sure to lea
 
 1. Describe the biggest difference between `.forEach` & `.map`.
 
+the biggest different between .map and .forEach is that .map returns a new array of elements & allows changes on the values by passing each element through a callback function.
+
 2. What is the difference between a function and a method?
+
+methods and functions both act upon the block of code that is enclosed within them since they are both functions.
+methods act upon a specific object while invoked, while functions do not need an object or receiver to be correctly invoked.
 
 3. What is closure?
 
+closure occurs typically when a function returns another function. within this return, a set of variables that are defined outside of the return function (let's call them closeX) become part of the scope of the return function. This allows for access to that variable (closeX) when the return function is being executed and there is no memory of the initial function in which the variable (closeX) was originally defined in. To sum it up: closure is a collection of all the variables in scope at the time of creation of the function.
+
 4. Describe the four rules of the 'this' keyword.
 
+  - window/global object binding: use this without .this or anything. so a simple funciton with 'return this' does it on global. 
+      ex. function () {
+            return this;
+          }
+      - this will refer to the window/console you are in and return the this of window/console object. output is typically huge.
+  - implicit binding: 'this.' refers to calling a function with a preceding dot; the this is the object before the dot. 
+      ex. 'pri.name' 'name' function will refer back to 'pri' object.
+  - new binding: using a constructor function, and then creating a new object using 'new' keyword
+  - explicit binding: when .call & .apply are used. allows for overriding of constructor objects. same as breakout section
+
 5. Why do we need super() in an extended class?
+
+super() is used when creating parent and child classes. when a child class inherits methods from its parent (or in the example of constructor functions, child inherits parent prototype), the use of super() allows for inheritance of parent method without requiring other syntax. it takes care of the binding that we had to do with .call() with constructor functions and prototypes.
 
 ## Project Set up
 
